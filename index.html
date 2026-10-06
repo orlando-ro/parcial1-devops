@@ -1,166 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hola mundo</title>
-    <style>
-      :root {
-        --bg-deep: #0d1117;
-        --bg-mid: #1a2333;
-        --panel: rgba(255, 248, 234, 0.08);
-        --panel-border: rgba(255, 255, 255, 0.18);
-        --ink: #f9f3ea;
-        --muted: #d7c9b6;
-        --gold: #e9c46a;
-        --gold-strong: #d4a64d;
-        --shadow: rgba(0, 0, 0, 0.35);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: Georgia, "Times New Roman", serif;
-        background:
-          radial-gradient(circle at top, rgba(233, 196, 106, 0.2), transparent 30%),
-          linear-gradient(145deg, var(--bg-deep), var(--bg-mid));
-        color: var(--ink);
-      }
-
-      .page-shell {
-        width: min(90vw, 1100px);
-        min-height: 78vh;
-        display: grid;
-        place-items: center;
-        padding: 32px;
-      }
-
-      .hero {
-        position: relative;
-        width: min(760px, 100%);
-        padding: 60px 52px 48px;
-        text-align: center;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-        border: 1px solid var(--panel-border);
-        box-shadow: 0 24px 60px var(--shadow);
-        backdrop-filter: blur(6px);
-        overflow: hidden;
-      }
-
-      .hero::before,
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: 18px;
-        border: 1px solid rgba(233, 196, 106, 0.35);
-        pointer-events: none;
-      }
-
-      .hero::after {
-        inset: 30px;
-        border-color: rgba(255, 255, 255, 0.12);
-      }
-
-      .eyebrow {
-        margin: 0 0 18px;
-        font-size: 0.8rem;
-        letter-spacing: 0.5rem;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(3.5rem, 8vw, 8rem);
-        line-height: 0.92;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #f7f0e6;
-        text-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
-      }
-
-      .lead {
-        max-width: 520px;
-        margin: 24px auto 0;
-        font-size: 1.05rem;
-        line-height: 1.8;
-        letter-spacing: 0.08em;
-        color: var(--muted);
-        text-transform: uppercase;
-      }
-
-      .cta-row {
-        margin-top: 36px;
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .cta-row a {
-        display: inline-block;
-        padding: 14px 26px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        border: 1px solid rgba(233, 196, 106, 0.7);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .cta-row a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(233, 196, 106, 0.2);
-      }
-
-      .primary {
-        background: linear-gradient(135deg, var(--gold), var(--gold-strong));
-        color: #1a140d;
-        font-weight: 700;
-      }
-
-      .secondary {
-        color: var(--ink);
-        background: rgba(255, 255, 255, 0.02);
-      }
-
-      @media (max-width: 600px) {
-        .hero {
-          padding: 42px 24px 34px;
-        }
-
-        .eyebrow {
-          letter-spacing: 0.28rem;
-        }
-
-        h1 {
-          letter-spacing: 0.12em;
-        }
-
-        .lead {
-          letter-spacing: 0.04em;
-          font-size: 0.9rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page-shell">
-      <section class="hero" aria-label="Hero de bienvenida">
-        <p class="eyebrow">Bienvenido</p>
-        <h1>Hola mundo</h1>
-        <p class="lead">Un saludo clásico, elegante y lleno de estilo.</p>
-        <div class="cta-row">
-          <a class="primary" href="#">Comenzar</a>
-          <a class="secondary" href="#">Descubrir</a>
-        </div>
-      </section>
-    </main>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fbfaf8">
+	<title>Hello, world — Orlando Rodriguez</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #37352f;
+			--muted: #85837e;
+			--line: #e9e7e3;
+			--paper: #fbfaf8;
+			--accent: #a87550;
+		}
+		* { box-sizing: border-box; }
+		body {
+			min-height: 100vh;
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			-webkit-font-smoothing: antialiased;
+		}
+		.page { width: min(100% - 48px, 760px); margin: 0 auto; padding: 34px 0 40px; }
+		.topbar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 22px;
+			border-bottom: 1px solid var(--line);
+			color: var(--muted);
+			font-size: 12px;
+		}
+		h1 { margin: 0; font-size: clamp(50px, 9vw, 82px); font-weight: 600; letter-spacing: -.075em; line-height: 1.02; }
+		h1 .hello { color: var(--accent); }
+		.name { margin: 19px 0 0; color: #77746d; font-family: Georgia, "Times New Roman", serif; font-size: clamp(20px, 3vw, 25px); font-style: italic; }
+		.note {
+			max-width: 475px;
+			margin-top: 68px;
+			padding: 18px 20px;
+			border: 1px solid var(--line);
+			border-radius: 8px;
+			background: rgba(255, 255, 255, .55);
+			color: #77746d;
+			font-size: 14px;
+			line-height: 1.7;
+		}
+		.note strong { color: var(--ink); font-weight: 600; }
+		footer { display: flex; justify-content: space-between; margin-top: 100px; padding-top: 18px; border-top: 1px solid var(--line); color: #a09d96; font-size: 11px; }
+		@media (max-width: 520px) {
+			.page { width: min(100% - 36px, 760px); padding-top: 24px; }
+			main { padding-top: 100px; }
+			.note { margin-top: 52px; }
+			footer { margin-top: 80px; }
+			.status { font-size: 10px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<main>
+			<h1><span class="hello">Hello,</span><br>world.</h1>
+			<p class="name">Soy Orlando Rodriguez.</p>
+			<div class="note"><strong>Hola.</strong> que tal?.</div>
+		</main>
+		<footer><span>Hecho con cariño</span><span>© Orlando Rodriguez</span></footer>
+	</div>
+</body>
 </html>
