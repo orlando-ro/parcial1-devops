@@ -17,7 +17,7 @@ jobs:
               run: npm install --global surge
 
             - name: Deploy to Surge
-              run: surge --project ./ --orlando-parcial1.surge.sh
+              run: surge --project ./ --domain orlando-parcial1.surge.sh
               env:
                 SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
                 SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
